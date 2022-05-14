@@ -1,6 +1,6 @@
 const { program } = require("commander");
 
-program.option("-p, --port <port>", "port for the Api");
+program.option("-p, --puerto <puerto>", "puerto for the Api");
 
 program.parse();
 
