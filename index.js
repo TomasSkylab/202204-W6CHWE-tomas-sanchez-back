@@ -1,8 +1,9 @@
 require("dotenv").config();
 const debug = require("debug")("robots:root");
 const chalk = require("chalk");
+const { connectDataBase } = require("./db/index");
 const app = require("./server");
-const { connectDataBase } = require("./db");
+
 const { initializeServer } = require("./server/initializeServer");
 
 const port = process.env.PORT || 4000;

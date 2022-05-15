@@ -5,7 +5,7 @@ const RobotSchema = new Schema({
     type: String,
   },
   image: {
-    type: Date,
+    type: String,
   },
   stamina: {
     type: Number,
