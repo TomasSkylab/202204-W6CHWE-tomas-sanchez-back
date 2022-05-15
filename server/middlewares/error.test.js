@@ -13,5 +13,17 @@ describe("Given a notFoundError function", () => {
 
       expect(res.status).toHaveBeenCalledWith(expectedStatus);
     });
+
+    test("Then it should call the response json method with the message 'Endpoint not found'", () => {
+      const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn(),
+      };
+      const expectedText = { msg: "Endpoint not found" };
+
+      notFoundError(null, res);
+
+      expect(res.json).toHaveBeenCalledWith(expectedText);
+    });
   });
 });
