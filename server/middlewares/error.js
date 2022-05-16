@@ -1,3 +1,4 @@
+require("dotenv").config();
 const chalk = require("chalk");
 const debug = require("debug")("robots:server:errors");
 
@@ -6,6 +7,7 @@ const notFoundError = (req, res) => {
   debug(chalk.red("Endpoint not found"));
 };
 
+// eslint-disable-next-line no-unused-vars
 const generalError = (err, req, res, next) => {
   debug(chalk.red(`Error: ${err.message}`));
   const errorCode = err.code ?? 500;
