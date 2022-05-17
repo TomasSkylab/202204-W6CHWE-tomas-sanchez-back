@@ -5,4 +5,4 @@ const getRobots = async (req, res) => {
   res.status(200).json({ robots });
 };
 
-module.exports = { getRobots };
+module.exports = getRobots;
